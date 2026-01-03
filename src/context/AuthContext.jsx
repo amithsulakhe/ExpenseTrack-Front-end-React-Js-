@@ -42,6 +42,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (name, email, password) => {
     try {
+      console.log(import.meta.env.VITE_API_URL);
       const response = await axiosInstance.post('/auth/register', {
         name,
         email,

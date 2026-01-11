@@ -34,7 +34,8 @@ jobs:
 
       - name: Build app
         run: npm run build
-
+      - name: check all files in dist folder
+        run: ls -a 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
